@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap");
+
+:root {
+  color-scheme: light;
+  --bg: #f4efe8;
+  --bg-accent: #fffaf5;
+  --surface: rgba(255, 250, 245, 0.78);
+  --surface-strong: #fffdfb;
+  --surface-dark: #14213d;
+  --text: #1f2933;
+  --muted: #66788a;
+  --line: rgba(19, 32, 61, 0.12);
+  --brand: #c46b3c;
+  --brand-strong: #a8552d;
+  --success: #1b7f5a;
+  --success-bg: #ebfff5;
+  --danger: #b73d35;
+  --danger-bg: #fff0ef;
+  --shadow: 0 18px 40px rgba(31, 41, 51, 0.08);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(196, 107, 60, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(20, 33, 61, 0.1), transparent 26%),
+    linear-gradient(180deg, #fcf7f1 0%, var(--bg) 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page-shell {
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(20px);
+  background: rgba(252, 247, 241, 0.75);
+  border-bottom: 1px solid rgba(19, 32, 61, 0.08);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand-kicker,
+.eyebrow,
+.confirmation-label,
+.nav-pill-label {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.brand-title,
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+.brand-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.hero-card {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.82), rgba(255, 248, 241, 0.96)),
+    var(--surface-strong);
+  border: 1px solid rgba(19, 32, 61, 0.08);
+  box-shadow: var(--shadow);
+}
+
+.hero-copy h1 {
+  margin: 0.7rem 0 0.9rem;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 0.98;
+  max-width: 11ch;
+}
+
+.hero-copy p,
+.section-copy,
+.book-description,
+.empty-state p,
+.status-panel p,
+.search-meta {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.hero-search,
+.panel,
+.status-panel {
+  padding: 1.4rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid var(--line);
+}
+
+.search-label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.search-input,
+.checkout-form input,
+.quantity-label input {
+  width: 100%;
+  border: 1px solid rgba(19, 32, 61, 0.15);
+  background: #fff;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input:focus,
+.checkout-form input:focus,
+.quantity-label input:focus {
+  outline: none;
+  border-color: rgba(196, 107, 60, 0.65);
+  box-shadow: 0 0 0 4px rgba(196, 107, 60, 0.12);
+}
+
+.status-panel {
+  margin-top: 1.5rem;
+}
+
+.success-panel {
+  background: var(--success-bg);
+  border-color: rgba(27, 127, 90, 0.18);
+}
+
+.error-panel {
+  background: var(--danger-bg);
+  border-color: rgba(183, 61, 53, 0.16);
+}
+
+.confirmation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.9fr);
+  gap: 1.5rem;
+  margin: 1.75rem 0 3rem;
+}
+
+.catalog-section {
+  min-width: 0;
+}
+
+.sidebar {
+  display: grid;
+  gap: 1rem;
+  align-self: start;
+  position: sticky;
+  top: 5.8rem;
+}
+
+.section-heading,
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.section-heading h2,
+.panel-heading h2,
+.status-panel h2 {
+  margin: 0.25rem 0 0;
+  font-size: 1.45rem;
+}
+
+.book-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.book-card {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(196, 107, 60, 0.3);
+}
+
+.book-cover {
+  display: grid;
+  place-items: center;
+  min-height: 112px;
+  border-radius: 22px;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-weight: 700;
+  color: #fff7ef;
+  background:
+    linear-gradient(160deg, rgba(196, 107, 60, 0.95), rgba(20, 33, 61, 0.88));
+}
+
+.book-content h3 {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.12rem;
+}
+
+.book-author {
+  margin: 0;
+  color: var(--muted);
+}
+
+.book-description {
+  margin: 0.7rem 0 1rem;
+}
+
+.book-meta,
+.book-footer,
+.cart-summary,
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.category-badge,
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.82rem;
+}
+
+.category-badge {
+  background: rgba(196, 107, 60, 0.12);
+  color: var(--brand-strong);
+}
+
+.rating-badge {
+  background: rgba(20, 33, 61, 0.08);
+}
+
+.book-footer span,
+.cart-item p {
+  display: block;
+  color: var(--muted);
+}
+
+.primary-button,
+.text-button {
+  border: 0;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.primary-button {
+  padding: 0.85rem 1.1rem;
+  border-radius: 14px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--brand), var(--brand-strong));
+  box-shadow: 0 14px 24px rgba(168, 85, 45, 0.22);
+}
+
+.primary-button:hover,
+.text-button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-button {
+  padding: 0;
+  background: transparent;
+  color: var(--brand-strong);
+  font-weight: 700;
+}
+
+.cart-stack,
+.checkout-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.cart-item {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(19, 32, 61, 0.08);
+}
+
+.cart-item h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.quantity-label {
+  display: grid;
+  gap: 0.35rem;
+  width: 96px;
+  font-size: 0.94rem;
+}
+
+.cart-summary {
+  padding-top: 0.35rem;
+  border-top: 1px dashed rgba(19, 32, 61, 0.12);
+}
+
+.checkout-form label {
+  display: grid;
+  gap: 0.45rem;
+  font-weight: 700;
+}
+
+.summary-card {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 33, 61, 0.05);
+}
+
+.inline-error {
+  margin: 0;
+  color: var(--danger);
+}
+
+.empty-state {
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 33, 61, 0.04);
+}
+
+@media (max-width: 1040px) {
+  .hero-card,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 760px) {
+  .navbar-inner,
+  .section-heading,
+  .panel-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-grid,
+  .confirmation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card {
+    grid-template-columns: 1fr;
+  }
+
+  .book-cover {
+    min-height: 84px;
+  }
+}

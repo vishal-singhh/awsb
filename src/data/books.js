@@ -1,0 +1,98 @@
+export const books = [
+  {
+    id: "bk-101",
+    title: "Designing Distributed Systems",
+    author: "Brendan Burns",
+    category: "Cloud Architecture",
+    price: 18.99,
+    format: "Paperback",
+    rating: 4.8,
+    cover: "DS",
+    description:
+      "A practical guide to patterns and trade-offs behind scalable cloud-native systems.",
+  },
+  {
+    id: "bk-102",
+    title: "System Design Interview",
+    author: "Alex Xu",
+    category: "System Design",
+    price: 14.5,
+    format: "Paperback",
+    rating: 4.7,
+    cover: "SD",
+    description:
+      "Visual, concise explanations of architecture concepts for interviews and projects.",
+  },
+  {
+    id: "bk-103",
+    title: "Clean Architecture",
+    author: "Robert C. Martin",
+    category: "Software Engineering",
+    price: 16.75,
+    format: "Paperback",
+    rating: 4.6,
+    cover: "CA",
+    description:
+      "Principles for building maintainable software systems with clear boundaries and intent.",
+  },
+  {
+    id: "bk-104",
+    title: "The Pragmatic Programmer",
+    author: "David Thomas",
+    category: "Craftsmanship",
+    price: 19.25,
+    format: "Hardcover",
+    rating: 4.9,
+    cover: "PP",
+    description:
+      "Timeless engineering habits for writing dependable, adaptable production software.",
+  },
+  {
+    id: "bk-105",
+    title: "Building Microservices",
+    author: "Sam Newman",
+    category: "Backend",
+    price: 21.0,
+    format: "Paperback",
+    rating: 4.5,
+    cover: "BM",
+    description:
+      "A practical reference for decomposing services, evolving APIs, and operating systems safely.",
+  },
+  {
+    id: "bk-106",
+    title: "Refactoring UI",
+    author: "Adam Wathan",
+    category: "Frontend Design",
+    price: 24.99,
+    format: "eBook",
+    rating: 4.9,
+    cover: "RU",
+    description:
+      "Concrete interface design guidance that turns simple layouts into polished product experiences.",
+  },
+  {
+    id: "bk-107",
+    title: "Designing Data-Intensive Applications",
+    author: "Martin Kleppmann",
+    category: "Data Systems",
+    price: 23.4,
+    format: "Paperback",
+    rating: 4.9,
+    cover: "DD",
+    description:
+      "Deep explanations of storage, replication, event streams, and resilient data architectures.",
+  },
+  {
+    id: "bk-108",
+    title: "AWS for Solutions Architects",
+    author: "Saurabh Shrivastava",
+    category: "AWS",
+    price: 17.8,
+    format: "Paperback",
+    rating: 4.4,
+    cover: "AW",
+    description:
+      "A focused AWS guide for designing low-cost, scalable systems suited for student projects.",
+  },
+];
